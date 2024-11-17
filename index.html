@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Header con título centrado</title>
+<link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <header>
+        <div class="titulo" style="background-color: #098136; color: white;">
+            <h1>NUESTROS PRODUCTOS</h1>
+        </div>
+        <div class="titulo1">
+            <div class="centreado">
+                <div class="dentro logo">
+                    <img src="naturcenter.svg">
+                </div>
+                <div class="dentro search-container">
+                    <input type="text" placeholder="Ingrese el producto.... " name="search" class="search-input">
+                    <button type="submit" class="search-button">Buscar</button>
+                </div>
+                <div class="redes_sociales">
+                    <h2 class="title_redes">Síguenos en: </h2>
+                    <div class="dentro_redes">
+                        <div class="sociales"><img src="fb.svg" width="27px"></div>
+                        <div class="sociales"><img src="inst.svg" width="27px"></div>
+                        <div class="sociales"><img src="tiktok.svg" width="27px"></div>
+                    </div>
+                </div>
+                <!-- Menú hamburguesa -->
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <div class="hamburger-item"><a href="#">Medicina Natural</a></div>
+                    <div class="hamburger-item"><a href="#">Abarrotes</a></div>
+                    <div class="hamburger-item"><a href="#">Cosmetica</a></div>
+                    <div class="hamburger-item"><a href="#">Otros</a></div>
+                    <div class="hamburger-item"><a href="#">Jugueria</a></div>
+                    <div class="hamburger-item"><a href="#">Ofertas</a></div>
+                    <div class="hamburger-item"><a href="#">Síguenos:</a></div>
+                    <div class="hamburger-item social-icons">
+                        <div class="sociales"><img src="fb.svg" width="20px"></div>
+                        <div class="sociales"><img src="inst.svg" width="20px"></div>
+                        <div class="sociales"><img src="tiktok.svg" width="20px"></div>
+                    </div>
+                </div>
+                <div class="hamburger-button" id="hamburger-button">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                </div>
+            </div>
+        </div>
+        <nav class="titulo">
+            <ul class="producto">
+                <li class="categoria"><a href="#"><h2>Medicina Natural</h2></a></li>
+                <li class="categoria"><a href="#"><h2>Abarrotes</h2></a></li>
+                <li class="categoria"><a href="#"><h2>Cosmetica</h2></a></li>
+                <li class="categoria"><a href="#"><h2>Otros</h2></a></li>
+                <li class="categoria"><a href="#"><h2>Jugueria</h2></a></li>
+                <li class="categoria"><a href="#"><h2>Ofertas</h2></a></li>
+            </ul>
+        </nav>
+    </header>    
+<section class="cuerpo">
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide"><img src="img1.jpg" alt="Imagen 1"></div>
+            <div class="slide"><img src="img2.jpg" alt="Imagen 2"></div>
+            <div class="slide"><img src="img3.jpg" alt="Imagen 3"></div>
+            <div class="slide"><img src="img4.jpg" alt="Imagen 4"></div>
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </div>
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+</section>
+<section class="cuerpomarcas">
+    <div class="container_marcas">
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/NATURE SUNSHINE_Mesa de trabajo 1.png" alt="Imagen 1">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/DXN_Mesa de trabajo 1.png" alt="Imagen 2">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/ARBOLDEVIDA_Mesa de trabajo 1.png" alt="Imagen 3">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/BELLA NATURA_Mesa de trabajo 1.png" alt="Imagen 4">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/OMNILIFE_Mesa de trabajo 1.png" alt="Imagen 5">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/FITFEM_Mesa de trabajo 1.png" alt="Imagen 6">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/FUXION_Mesa de trabajo 1.png" alt="Imagen 7">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/MIL OLIVOS_Mesa de trabajo 1.png" alt="Imagen 8">
+        </div>
+        <div class="item">
+            <img src="LOGOS MARCAS PNG/ECOVALLE_Mesa de trabajo 1.png" alt="Imagen 9">
+        </div>
+        <div class="item_last">
+            <img src="LOGOS MARCAS PNG/Imagen_de_WhatsApp_2024-11-14_a_las_13.17.08_6fa57172-removebg-preview.png" alt="Imagen 10">
+        </div>
+    </div>
+</section>
+<main class="main_sections">
+<section class="container_categorias">
+    <div class="title-container">
+        <h2 class="container-title">Categorias ...</h2>
+    </div>
+    <div class="image-container">
+        <div class="item">
+            <img src="LOGOS CATEGORIAS PNG/1-Photoroom.png" alt="Imagen 1">
+            <p class="subtitulo">Mieles</p>
+        </div>
+        <div class="item">
+            <img src="LOGOS CATEGORIAS PNG/2-Photoroom.png" alt="Imagen 2">
+            <p class="subtitulo">Capsulas</p>
+        </div>
+        <div class="item">
+            <img src="LOGOS CATEGORIAS PNG/3-Photoroom.png" alt="Imagen 3">
+            <p class="subtitulo">Extractos</p>
+        </div>
+        <div class="item">
+            <img src="LOGOS CATEGORIAS PNG/4-Photoroom.png" alt="Imagen 4">
+            <p class="subtitulo">Aceites</p>
+        </div>
+        <div class="item">
+            <img src="LOGOS CATEGORIAS PNG/5-Photoroom.png" alt="Imagen 5">
+            <p class="subtitulo">Colagenos</p>
+        </div>
+    </div>
+</section>
+<section class="container_mas_vendidos">
+    <div class="title-container_vendidos">
+        <div class="title_more_log">
+            <img src="MINILOGOS/carrito.png" alt="Logo" class="title-logo">
+            <h2 class="container-title_vendidos">Lo mas vendido ...</h2>
+        </div>
+        <a href="#" class="view-more">Ver más...;</a>
+    </div>
+    <div class="carrusel">
+        <button class="carrusel-btn prev-btn">&#10094;</button>
+        <div class="image-container_vendidos">
+            <div class="carousel-track">
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+                <div class="item">
+                    <img src="productos/1.png" alt="Producto 1">
+                    <span class="brand">Arbol de vida</span>
+                    <p class="product-name">Colageno anti-edad x100 cap</p>
+                    <div class="price-info">
+                        <span>Precio online</span>
+                        <span class="price">S/. 45.50</span>
+                    </div>
+                    <div class="price-info-small">
+                        <span>Precio regular</span>
+                        <span class="price">S/. 48.00</span>
+                    </div>
+                    <div class="quantity-control">
+                        <button class="minus">-</button>
+                        <span class="quantity">1</span>
+                        <button class="plus">+</button>
+                    </div>
+                    <button class="add-to-cart">Agregar</button>
+                </div>
+            </div>
+        </div>
+        <button class="carrusel-btn next-btn">&#10095;</button>
+    </div>
+</section>
+</main>
+<script>
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const hamburgerMenu = document.getElementById('hamburger-menu');
+
+    hamburgerButton.addEventListener('click', () => {
+        hamburgerMenu.classList.toggle('active');
+        hamburgerButton.classList.toggle('active');
+    });
+</script>
+<script>// Seleccionamos los elementos relevantes
+// Seleccionamos los elementos relevantes
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const track = document.querySelector('.carousel-track'); // Contenedor que se mueve
+const items = document.querySelectorAll('.carousel-track .item');
+let currentIndex = 0; // Índice del elemento visible
+
+// Función para obtener el número de ítems a saltar según el tamaño de la pantalla
+function getItemsToSkip() {
+    if (window.innerWidth < 768) {
+        return 3; // Para pantallas pequeñas, saltamos 3 elementos
+    } else if (window.innerWidth < 1200) {
+        return 4; // Para pantallas medianas, saltamos 4 elementos
+    } else {
+        return 6; // Para pantallas grandes, saltamos 6 elementos
+    }
+}
+
+// Función para actualizar la posición del carrusel
+function updateCarousel() {
+    const itemWidth = items[0].offsetWidth; // Ancho de cada item
+    const gap = parseInt(getComputedStyle(track).gap, 10); // Obtener el gap entre los ítems
+    const offset = -(currentIndex * (itemWidth + gap)); // Ajustamos el desplazamiento tomando en cuenta el gap
+
+    // Desplazar el contenedor de imágenes
+    track.style.transform = `translateX(${offset}px)`;
+    track.style.transition = 'transform 0.6s ease';
+}
+
+// Función para reiniciar el ciclo del carrusel
+function restartCarousel() {
+    const itemsToSkip = getItemsToSkip();
+    
+    // Verificar si se llega al final
+    if (currentIndex >= items.length - itemsToSkip) {
+        currentIndex = 0; // Reiniciar al primer item
+        track.style.transition = 'none'; // Eliminar la transición para el reinicio instantáneo
+        track.style.transform = `translateX(0)`; // Reiniciar el desplazamiento
+        setTimeout(() => {
+            track.style.transition = 'transform 0.5s ease'; // Volver a activar la transición
+        }, 50); // Esperar un pequeño tiempo para que se vea el reinicio
+    }
+}
+
+// Botón siguiente
+nextBtn.addEventListener('click', () => {
+    const itemsToSkip = getItemsToSkip();
+    
+    if (currentIndex < items.length - itemsToSkip) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Reiniciar al primer item
+    }
+    updateCarousel();
+    restartCarousel(); // Comprobar si se necesita reiniciar el carrusel
+});
+
+// Botón anterior
+prevBtn.addEventListener('click', () => {
+    const itemsToSkip = getItemsToSkip();
+    
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = items.length - itemsToSkip; // Ir al último item
+    }
+    updateCarousel();
+    restartCarousel(); // Comprobar si se necesita reiniciar el carrusel
+});
+
+// Configuración inicial
+updateCarousel(); // Inicializar la posición al cargar la página
+
+</script>
+
+<script src="script_cuerpo.js"></script>
+<script src="main.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
