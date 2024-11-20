@@ -393,6 +393,7 @@ button.next {
     margin: 0;
     box-sizing: border-box;
     padding-top: 30px;
+    padding-bottom: 20px;
 }
 /*categorias*/
 .container_categorias {
@@ -481,7 +482,7 @@ button.next {
     }
 }
 /*los mas vendidos*/
-.container_mas_vendidos {
+.container__scroll {
     max-width: 80%;
     margin: auto;
     margin-top: 30px;
@@ -490,12 +491,13 @@ button.next {
     border-radius: 10px;
     position: relative;
     background-color: #fff;
-    margin-bottom: 80px;
     box-sizing: border-box;
+    padding-bottom: 30px;
+
 }
 
 /* Título y enlaces */
-.container_mas_vendidos .title-container_vendidos {
+.container__scroll .title__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -507,12 +509,12 @@ button.next {
     max-height: 50px;
     align-items: end;
 }
-.title-container_vendidos .title-logo {
+.title__container .title-logo {
     max-width: 50px;
     max-height: 50px;
 }
 
-.title-container_vendidos .container-title_vendidos{
+.title__container .textTitle_container{
     font-family: 'Lucida Sans';
     font-size: 1.5em;
     font-weight: 400;
@@ -522,14 +524,14 @@ button.next {
     letter-spacing: 1px;
 }
 
-.title-container_vendidos .view-more {
+.title__container .view-more {
     color: #45a049;
     font-weight: bold;
     text-decoration: none;
 }
 
 /* Carrusel de productos */
-.carrusel {
+.carrusel__container {
     display: flex;
     align-items: center;
     position: relative;
@@ -556,35 +558,37 @@ button.next {
 .carrusel-btn:hover {
     background-color:#4db452; /* Cambia a un fondo más oscuro al pasar el ratón */
 }
-.carrusel .image-container_vendidos {
+.carrusel__container .items__container {
     display: flex;
-    flex-wrap: nowrap;/**/
+    flex-wrap: nowrap;
     gap: 15px;
     width: 100%;
     box-sizing: border-box;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 9px 10px;
 }
 
-.image-container_vendidos::-webkit-scrollbar {
+.items__container::-webkit-scrollbar {
     height: 6px;
 }
 
-.image-container_vendidos::-webkit-scrollbar-thumb {
+.items__container::-webkit-scrollbar-thumb {
     background-color: #45a049;
     border-radius: 10px;
 }
 
-.carousel-track {
+.track__carrusel {
     display: flex;
     gap: 15px;
     width: 100%;
     transition: transform 0.5s ease;
-    will-change: transform; /* Mejora el rendimiento */
+}
+.items__container {
+    overflow: hidden; /* Oculta elementos que están fuera de la vista */
 }
 
 /* Estilo de cada item */
-.image-container_vendidos .item {
+.items__container .item {
     flex:0 0 auto;
     width: calc(33.33% - 10px);
     max-width: 220px; /* Máximo ancho */
@@ -597,7 +601,7 @@ button.next {
     box-sizing: border-box;
 }
 
-.image-container_vendidos .item:hover {
+.items__container .item:hover {
     transform: scale(1.05); /* Efecto de ampliación al pasar el ratón */
 }
 
@@ -612,19 +616,19 @@ button.next {
 }
 
 @media (min-width: 768px) {
-    .image-container_vendidos .item {
+    .items__container .item {
         width: calc(25% - 10px); /* Menos espacio en pantallas medianas */
     }
 }
 
 @media (min-width: 1200px) {
-    .image-container_vendidos .item {
+    .items__container .item {
         width: calc(20% - 10px); /* Reducir aún más en pantallas grandes */
     }
 }
 
 @media (min-width: 1600px) {
-    .image-container_vendidos .item {
+    .items__container .item {
         width: calc(16.66% - 10px); /* Ajuste para pantallas muy grandes */
     }
 }
@@ -732,4 +736,270 @@ button.next {
     .quantity {
         font-size: 1em;
     }
+}
+/*Categooriaa*/
+.CATEGORIAS{
+    Background-color: #ededed;
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box;
+    padding-top: 30px;
+    
+}
+.title__categori{
+    text-align: center;
+}
+.title__categori h2{
+    color: #2a922f;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+/* Estilo general del contenedor */
+.boxBody__categori{
+    display: flex;
+    position: relative;
+    width:100%;
+    height: auto;
+    padding: 0 10px;
+    overflow-x: hidden;
+}
+
+.slider__categori {
+    width: 100%; /* Se ajusta a todo el ancho disponible */
+    max-width:35%; /* No más de 50% del ancho del contenedor principal */
+    height: 100%;
+    max-height: 350px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #ddd; /* Borde alrededor del carrusel */
+    border-radius: 10px;
+}
+
+/* Estilo para las imágenes */
+.container__slider {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.item__slider {
+    min-width: 100%;
+
+    height: auto; /* Cada imagen ocupa el 100% del contenedor */
+
+}
+
+.item__slider img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover; /* Ajusta la imagen para que no se deforme */
+}
+.item__slider.active {
+    display: block; /* Solo se muestra la imagen activa */
+}
+
+/* Estilo de los puntos */
+.dots__categori {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 8px;
+    left: 80%;
+    z-index: 10; /* Asegura que los puntos estén por encima de las imágenes */
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.dot__categori {
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot__categori.active {
+    background-color: green;
+}
+
+
+.carrusel__container__categori {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    width:65%;
+    padding: 0 5px 0 10px;
+
+}
+
+.carrusel-btn__categori {
+    background-color: #45a049;
+    color: white;
+    border: none;
+    width:13%;
+    min-width: 35px;
+    height: 13%;
+    min-height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.5em;
+    transform: translateY(-50%);
+    box-shadow: 0 0 15px #0006;
+}
+
+/* Estilo de los botones en estado hover */
+.carrusel-btn__categori:hover {
+    background-color:#4db452; /* Cambia a un fondo más oscuro al pasar el ratón */
+}
+.carrusel__container__categori .items__container__categorri {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 9px 10px;
+}
+
+.items__container__categori::-webkit-scrollbar {
+    height: 6px;
+}
+
+.items__container__categori::-webkit-scrollbar-thumb {
+    background-color: #45a049;
+    border-radius: 10px;
+}
+
+.track__carrusel__categori {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    transition: transform 0.5s ease;
+    margin:0 10px ;
+
+}
+.items__container__categori {
+    overflow: hidden; /* Oculta elementos que están fuera de la vista */
+}
+
+/* Estilo de cada item */
+.items__container__categori .item {
+    flex:0 0 auto;
+    width: calc(33.33% - 10px);
+    max-width: 220px; /* Máximo ancho */
+    min-width: 120px; /* Mínimo ancho para pantallas pequeñas */
+    border: 1px solid #0006;
+    border-radius: 10px;
+    padding: 8px;
+    padding-top: 12px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.items__container__categori .item:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el ratón */
+}
+
+/* Elementos del producto */
+.track__carrusel__categori .item img {
+    width: 60%; /* Ancho completo del contenedor */
+    max-width: 180px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px; /* Bordes redondeados para la imagen */
+    filter: drop-shadow(3px 3px 1px #0006);
+}
+
+
+
+@media (min-width: 1200px) {
+    .items__container__categori .item {
+        width: calc(20% - 10px); /* Reducir aún más en pantallas grandes */
+    }
+}
+
+@media (min-width: 1600px) {
+    .items__container__categori .item {
+        width: calc(25% - 10px);  /* Ajuste para pantallas muy grandes */
+    }
+}
+
+
+/*Links en bloques*/
+.linksBlock__categori {
+    display: flex;
+    justify-content: space-between; /* Espacio igual entre los bloques */
+    background-color: #ededed; /* Fondo del contenedor grande */
+    padding: 20px;
+    gap: 10px; /* Espacio entre los bloques */
+    width: 100%;
+}
+
+.linksBlock__categori > div {
+    background-color: #fff; /* Fondo blanco para cada bloque */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra mínima */
+    padding: 15px;
+    width: 22%; /* Ancho del 22% para cada bloque, espacio incluido */
+    text-align: center; /* Centrar el contenido */
+    box-sizing: border-box; /* Para asegurarse de que el padding no afecte el tamaño del bloque */
+}
+
+.linksBlock__categori > div h3, .linksBlock__categori > div p {
+    margin: 10px 0; /* Espaciado entre los elementos del bloque */
+}
+
+
+
+/*Footer */
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(52, 189, 39);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer > div {
+    width: 20%;
+    padding: 0 10px;
+}
+
+footer h2, footer h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+footer span {
+    font-weight: bold;
+}
+
+footer .contactos__footer,
+footer .servicioCliente__footer,
+footer .institucional__footer,
+footer .infoExtra__footer,
+footer .linksAndPays__footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .logosCardPay__infoExtra,
+footer .reclamacionesLogoMoreTitle__institucional,
+footer .siguenos__linksAndPagos,
+footer .pays__linksAndPagos {
+    display: block;
+    margin-top: 20px;
 }
